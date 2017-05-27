@@ -1,7 +1,18 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model MVCCoreApp.ViewModels.PersonViewModel
 
-<h2>Witaj</h2>
-<p>Jest to strona na której absolutnie nic nie ma.</p>
-<p>Ale tym razem jest wzieta z github</p>
+@if (Model == null)
+{
+    <h2>Dzień dobry</h2>
+    <p>Podaj swoje imie</p>
+    <form asp-controller="Home" asp-action="Index">
+        <p>
+            Podaj swoje imie: <input type="text" name="Name" />
+            <input type="submit" value="Przeslij" />
+        </p>
+    </form>
+}
+else
+{
+    <h2>A więc witaj: @Model.Name</h2>
+    <h1>W moich skromnych progach.</h1>
+}
