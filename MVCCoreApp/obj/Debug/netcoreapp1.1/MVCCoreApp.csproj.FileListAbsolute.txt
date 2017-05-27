@@ -1,9 +1,0 @@
-F:\Projekty\MVCCoreApp\MVCCoreApp\bin\Debug\netcoreapp1.1\MVCCoreApp.deps.json
-F:\Projekty\MVCCoreApp\MVCCoreApp\bin\Debug\netcoreapp1.1\MVCCoreApp.runtimeconfig.json
-F:\Projekty\MVCCoreApp\MVCCoreApp\bin\Debug\netcoreapp1.1\MVCCoreApp.runtimeconfig.dev.json
-F:\Projekty\MVCCoreApp\MVCCoreApp\bin\Debug\netcoreapp1.1\MVCCoreApp.dll
-F:\Projekty\MVCCoreApp\MVCCoreApp\bin\Debug\netcoreapp1.1\MVCCoreApp.pdb
-F:\Projekty\MVCCoreApp\MVCCoreApp\obj\Debug\netcoreapp1.1\MVCCoreApp.csprojResolveAssemblyReference.cache
-F:\Projekty\MVCCoreApp\MVCCoreApp\obj\Debug\netcoreapp1.1\MVCCoreApp.AssemblyInfo.cs
-F:\Projekty\MVCCoreApp\MVCCoreApp\obj\Debug\netcoreapp1.1\MVCCoreApp.dll
-F:\Projekty\MVCCoreApp\MVCCoreApp\obj\Debug\netcoreapp1.1\MVCCoreApp.pdb
