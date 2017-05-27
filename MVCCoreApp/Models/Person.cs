@@ -20,7 +20,7 @@ namespace MVCCoreApp.Models
             {
                 if(specialNames.Contains(value) )
                 {
-                    name = value + "xD";
+                    name = value + " xD";
                 }
                 else
                 {
