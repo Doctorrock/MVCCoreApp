@@ -34,10 +34,8 @@ namespace MVCCoreApp.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Burger()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
