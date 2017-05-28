@@ -8,7 +8,11 @@ namespace MVCCoreApp.Models
     public class Person
     {
         private string name;
-        private List<string> specialNames = new List<string>() { "Paweł", "Martyna", "Zuzia" };
+        private readonly List<string> specialNames = new List<string>() { "Paweł", "Martyna", "Zuzia" };
+
+        public int ID { get; set; }
+
+        public DateTime CreationTime { get; set; }
 
         public string Name
         {
@@ -30,14 +34,5 @@ namespace MVCCoreApp.Models
             }
         }
 
-        public string ComputeName(string name)
-        {
-            if (specialNames.Contains(name))
-            {
-                return name + "xD";
-            }
-
-            return name;
-        }
     }
 }

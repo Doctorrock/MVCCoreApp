@@ -10,17 +10,28 @@ namespace MVCCoreApp.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly MVCCoreAppContext _context;
+
+        public HomeController(MVCCoreAppContext context)
+        {
+            _context = context;
+        }
 
         public IActionResult Index(string name)
         {
-            Person person;
+            
             PersonViewModel viewModel = null;
             if (name != null)
             {
-                person = new Person
+
+                var person = new Person
                 {
-                    Name = name
+                    Name = name,
+                    CreationTime = DateTime.Now
                 };
+
+                _context.Add(person);
+                _context.SaveChanges();
                 viewModel = new PersonViewModel(person);
             }
 
