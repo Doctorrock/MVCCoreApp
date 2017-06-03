@@ -33,7 +33,8 @@ namespace MVCCoreApp
             services.AddMvc();
 
             services.AddDbContext<MVCCoreAppContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("MVCCoreAppContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("MVCCoreAzure")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +47,11 @@ namespace MVCCoreApp
             {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
+
+                using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+                {
+                    serviceScope.ServiceProvider.GetService<MVCCoreAppContext>().Database.Migrate();
+                }
             }
             else
             {
