@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+
+    <div class="form-horizontal">
+        <h4>Person</h4>
+        <hr />
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Car Name</th>
+                <th>Wheels</th>
+                <th>Wheel Price</th>
+            </tr>
+            </thead>
+            <tbody data-bind="foreach: carsList">
+            <tr>
+                <td><input data-bind="value: name" /></td>
+                <td><input data-bind="value: wheels" /></td>
+                <td><input data-bind="value: wheelPrice" /></td>
+                <td data-bind="text: totalPrice"></td>
+                <td><a href="#" data-bind="click: $root.removeSeat">Remove</a></td>
+            </tr>
+
+            </tbody>
+        </table>
+        <button data-bind="click: addCar, enable: carsList().length < 5">Add new car</button>
+    </div>
+
+
+
+<script type="text/javascript" src="js/CarsViewModel.js"></script>

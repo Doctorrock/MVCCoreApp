@@ -33,7 +33,7 @@ namespace MVCCoreApp
             services.AddMvc();
 
             services.AddDbContext<MVCCoreAppContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("MVCCoreAzure")));
+                    options.UseSqlServer(Configuration.GetConnectionString("MVCCoreAppContext")));
 
         }
 

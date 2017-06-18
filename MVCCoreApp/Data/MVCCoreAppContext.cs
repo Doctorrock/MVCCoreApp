@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using MVCCoreApp.Models;
 
 namespace MVCCoreApp.Models
 {
@@ -14,5 +15,7 @@ namespace MVCCoreApp.Models
         }
 
         public DbSet<MVCCoreApp.Models.Person> Person { get; set; }
+
+        public DbSet<MVCCoreApp.Models.Car> Car { get; set; }
     }
 }
